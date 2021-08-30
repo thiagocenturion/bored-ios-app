@@ -113,13 +113,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		FA18D1AC26D987DF00120B9D /* Domains */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domains;
-			sourceTree = "<group>";
-		};
 		FA18D1AD26D987FE00120B9D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +148,13 @@
 			path = FilterActivities;
 			sourceTree = "<group>";
 		};
+		FA18D1B726DD082900120B9D /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domains;
+			sourceTree = "<group>";
+		};
 		FAC6E66C26D7164700FD46F8 = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FA18D1A926D9873A00120B9D /* App */,
-				FA18D1AC26D987DF00120B9D /* Domains */,
+				FA18D1B726DD082900120B9D /* Domains */,
 				FA18D1A826D9872F00120B9D /* Library */,
 				FA18D1AB26D987CF00120B9D /* Modules */,
 				FA18D1AA26D987AD00120B9D /* Supporting Files */,
