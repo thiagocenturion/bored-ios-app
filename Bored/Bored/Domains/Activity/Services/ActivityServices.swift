@@ -21,7 +21,7 @@ protocol PlaceServicesType {
         price: Double?,
         priceRange: Range<Double>?,
         accessibility: Float?,
-        accessibilityRange: Range<Float>?) -> Single<[Activity]>
+        accessibilityRange: Range<Float>?) -> Single<Activity>
 }
 
 final class PlaceServices: PlaceServicesType {
@@ -42,38 +42,38 @@ final class PlaceServices: PlaceServicesType {
         price: Double? = nil,
         priceRange: Range<Double>? = nil,
         accessibility: Float? = nil,
-        accessibilityRange: Range<Float>? = nil) -> Single<[Activity]> {
+        accessibilityRange: Range<Float>? = nil) -> Single<Activity> {
 
-        let queryItems = [URLQueryItem]()
+        var queryItems = [URLQueryItem]()
 
         if let key = key {
             queryItems.append(.init(name: "key", value: key))
         }
 
         if let type = type {
-            queryItems.append(.init(name: "type", value: type))
+            queryItems.append(.init(name: "type", value: type.rawValue))
         }
 
         if let participants = participants {
-            queryItems.append(.init(name: "participants", value: participants))
+            queryItems.append(.init(name: "participants", value: "\(participants)"))
         }
 
         if let price = price {
-            queryItems.append(.init(name: "price", value: price))
+            queryItems.append(.init(name: "price", value: "\(price)"))
         }
 
         if let priceRange = priceRange {
-            queryItems.append(.init(name: "minprice", value: priceRange.lowerBound))
-            queryItems.append(.init(name: "maxprice", value: priceRange.upperBound))
+            queryItems.append(.init(name: "minprice", value: "\(priceRange.lowerBound)"))
+            queryItems.append(.init(name: "maxprice", value: "\(priceRange.upperBound)"))
         }
 
         if let accessibility = accessibility {
-            queryItems.append(.init(name: "accessibility", value: accessibility))
+            queryItems.append(.init(name: "accessibility", value: "\(accessibility)"))
         }
 
         if let accessibilityRange = accessibilityRange {
-            queryItems.append(.init(name: "minaccessibility", value: priceRange.lowerBound))
-            queryItems.append(.init(name: "maxaccessibility", value: priceRange.upperBound))
+            queryItems.append(.init(name: "minaccessibility", value: "\(accessibilityRange.lowerBound)"))
+            queryItems.append(.init(name: "maxaccessibility", value: "\(accessibilityRange.upperBound)"))
         }
 
         let request = APIRequest(
@@ -84,7 +84,7 @@ final class PlaceServices: PlaceServicesType {
 
         return apiClient.request(with: request).flatMap { json in
             guard
-                let activity = try JSONDecoder().decode(Activity.self, from: json.rawData())
+                let activity = try? JSONDecoder().decode(Activity.self, from: json.rawData())
             else {
                 return .error(NetworkingError.invalidDecode)
             }

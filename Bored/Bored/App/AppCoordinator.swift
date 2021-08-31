@@ -27,7 +27,7 @@ final class AppCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         guard let rootViewController = navigationController as? UIViewController else { return .never() }
 
-        let coordinator = RequestAddressCoordinator(navigationController: navigationController)
+        let coordinator = HomeCoordinator(navigationController: navigationController)
 
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()

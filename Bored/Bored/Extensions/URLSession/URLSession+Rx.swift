@@ -16,22 +16,22 @@ extension Reactive where Base: URLSession {
 
             let task = self.base.dataTask(with: request) { data, response, error in
                 guard let response = response else {
-                    single(.error(error ?? NetworkingError.unknown))
+                    single(.failure(error ?? NetworkingError.unknown))
                     return
                 }
 
                 guard let data = data else {
-                    single(.error(NetworkingError.noData))
+                    single(.failure(NetworkingError.noData))
                     return
                 }
 
                 guard let httpResponse = response as? HTTPURLResponse else {
-                    single(.error(NetworkingError.nonHTTPResponse(response: response)))
+                    single(.failure(NetworkingError.nonHTTPResponse(response: response)))
                     return
                 }
 
                 guard 200 ..< 300 ~= httpResponse.statusCode else {
-                    single(.error(NetworkingError.serverErrorMessage(message: String(decoding: data, as: UTF8.self))))
+                    single(.failure(NetworkingError.serverErrorMessage(message: String(decoding: data, as: UTF8.self))))
                     return
                 }
 
