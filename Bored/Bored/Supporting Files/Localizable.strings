@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Bored
+
+  Created by Thiago Centurion on 30/08/21.
+  
+*/
+
+"error_message_title" = "Woops!";
+"error_message_no_connection" = "No connection! Activate mobile networks or connect to a Wi-fi network.";
+"error_message_bad_request" = "We had a problem getting the data. Try again.";
+"error_message_generic" = "There was a problem, but we are already solving it. Try again later.";
+"error_message_confirm_button" = "Ok";
