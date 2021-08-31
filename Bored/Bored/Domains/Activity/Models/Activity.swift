@@ -7,13 +7,91 @@
 
 import Foundation
 
-struct Activity: Decodable {
+final class Activity: Codable {
 
-    let activity: String
+    // MARK: Inner types
+
+    enum Status: Int, Codable {
+        case none
+        case inProgress
+        case done
+        case withdrawal
+    }
+
+    enum CategoryType: String, Codable {
+        case education
+        case recreational
+        case social
+        case diy
+        case charity
+        case cooking
+        case relaxation
+        case music
+        case busywork
+    }
+    
+    // MARK: Properties
+    let title: String
     let accessibility: Float
-    let type: ActivityType
+    let type: CategoryType
     let participants: Int
     let price: Double
-    let link: URL
+    var link: URL?
     let key: String
+
+    var initialTime: Date?
+    let status: Status
+
+    // MARK: - CodingKeys
+    private enum CodingKeys: String, CodingKey {
+        case title = "activity"
+        case accessibility, type, participants, price, link, key, initialTime, status
+    }
+
+    // MARK: - Initialization
+    init(title: String,
+         accessibility: Float,
+         type: CategoryType,
+         participants: Int,
+         price: Double,
+         link: URL?,
+         key: String,
+         initialTime: Date?,
+         status: Status) {
+
+        self.title = title
+        self.accessibility = accessibility
+        self.type = type
+        self.participants = participants
+        self.price = price
+        self.link = link
+        self.key = key
+        self.initialTime = initialTime
+        self.status = status
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        self.title = try container.decode(String.self, forKey: .title)
+        self.accessibility = try container.decode(Float.self, forKey: .accessibility)
+        self.type = try container.decode(CategoryType.self, forKey: .type)
+        self.participants = try container.decode(Int.self, forKey: .participants)
+        self.price = try container.decode(Double.self, forKey: .price)
+
+        let linkString = try container.decode(String.self, forKey: .link)
+
+        if let url = URL(string: linkString) {
+            self.link = url
+        }
+
+        self.key = try container.decode(String.self, forKey: .key)
+
+        if let initialTime = try? container.decode(Date.self, forKey: .initialTime) {
+            self.initialTime = initialTime
+        }
+
+        let status = try? container.decode(Status.self, forKey: .key)
+        self.status = status ?? .none
+    }
 }

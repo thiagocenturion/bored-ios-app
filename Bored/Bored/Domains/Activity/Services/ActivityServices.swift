@@ -16,7 +16,7 @@ protocol PlaceServicesType {
 
     func requestActivity(
         key: String?,
-        type: ActivityType?,
+        type: Activity.CategoryType?,
         participants: Int?,
         price: Double?,
         priceRange: Range<Double>?,
@@ -37,7 +37,7 @@ final class PlaceServices: PlaceServicesType {
     // MARK: - PlaceWebServicesType
     func requestActivity(
         key: String? = nil,
-        type: ActivityType? = nil,
+        type: Activity.CategoryType? = nil,
         participants: Int? = nil,
         price: Double? = nil,
         priceRange: Range<Double>? = nil,

@@ -29,7 +29,6 @@
 		FA18D1E626DD78FE00120B9D /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1E526DD78FE00120B9D /* APIRequest.swift */; };
 		FA18D1E826DD793200120B9D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1E726DD793200120B9D /* APIClient.swift */; };
 		FA18D1ED26DD7A6400120B9D /* ActivityServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1EC26DD7A6400120B9D /* ActivityServices.swift */; };
-		FA18D1F026DD7B3900120B9D /* ActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1EF26DD7B3900120B9D /* ActivityType.swift */; };
 		FA18D1F226DD7BCC00120B9D /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1F126DD7BCC00120B9D /* Activity.swift */; };
 		FA18D1F726DDBF5B00120B9D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1F626DDBF5B00120B9D /* HomeCoordinator.swift */; };
 		FA18D1FC26DDC26600120B9D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1FA26DDC26600120B9D /* HomeViewController.swift */; };
@@ -89,7 +88,6 @@
 		FA18D1E526DD78FE00120B9D /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		FA18D1E726DD793200120B9D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FA18D1EC26DD7A6400120B9D /* ActivityServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityServices.swift; sourceTree = "<group>"; };
-		FA18D1EF26DD7B3900120B9D /* ActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityType.swift; sourceTree = "<group>"; };
 		FA18D1F126DD7BCC00120B9D /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FA18D1F626DDBF5B00120B9D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		FA18D1FA26DDC26600120B9D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 		FA18D1EA26DD7A3000120B9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA18D1EF26DD7B3900120B9D /* ActivityType.swift */,
 				FA18D1F126DD7BCC00120B9D /* Activity.swift */,
 			);
 			path = Models;
@@ -660,7 +657,6 @@
 				FA18D1DF26DD779D00120B9D /* String+Extensions.swift in Sources */,
 				FA18D1DC26DD775F00120B9D /* NetworkingError.swift in Sources */,
 				FA18D1E826DD793200120B9D /* APIClient.swift in Sources */,
-				FA18D1F026DD7B3900120B9D /* ActivityType.swift in Sources */,
 				FA18D1BB26DD718C00120B9D /* AppCoordinator.swift in Sources */,
 				FA18D1BD26DD737C00120B9D /* UINavigationControllerType.swift in Sources */,
 				FA18D1CA26DD750500120B9D /* AlertActionViewModel.swift in Sources */,
