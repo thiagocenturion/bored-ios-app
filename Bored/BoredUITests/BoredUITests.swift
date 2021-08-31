@@ -2,7 +2,7 @@
 //  BoredUITests.swift
 //  BoredUITests
 //
-//  Created by MACBOOK on 25/08/21.
+//  Created by Thiago Centurion on 25/08/21.
 //
 
 import XCTest
