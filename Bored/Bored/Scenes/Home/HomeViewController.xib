@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-lu-zRi">
-                    <rect key="frame" x="24" y="734" width="366" height="104"/>
+                    <rect key="frame" x="24" y="401" width="366" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-ms-JUD">
                             <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
@@ -102,13 +102,13 @@ in progress.</string>
                                     <rect key="frame" x="16" y="16" width="334" height="342.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a bubble bath" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUt-29-QGc">
-                                            <rect key="frame" x="0.0" y="0.0" width="334" height="76.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" systemColor="systemIndigoColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qMN-RY-Dgo">
-                                            <rect key="frame" x="0.0" y="88.5" width="334" height="40.5"/>
+                                            <rect key="frame" x="0.0" y="36" width="334" height="40.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brn-SO-T8G">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -125,7 +125,7 @@ in progress.</string>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ynE-KF-5jE">
-                                            <rect key="frame" x="0.0" y="141" width="334" height="40.5"/>
+                                            <rect key="frame" x="0.0" y="88.5" width="334" height="40.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqI-ay-lhe">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -142,7 +142,7 @@ in progress.</string>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="5nC-x7-Nhk">
-                                            <rect key="frame" x="0.0" y="193.5" width="334" height="40.5"/>
+                                            <rect key="frame" x="0.0" y="141" width="334" height="40.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsT-Ta-LH6">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
@@ -158,19 +158,36 @@ in progress.</string>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-Ny-kl8">
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hVB-M1-adq">
+                                            <rect key="frame" x="0.0" y="193.5" width="334" height="40.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INc-zn-Bch">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5k-k0-Wf9">
+                                                    <rect key="frame" x="0.0" y="20" width="334" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemIndigoColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-Ny-kl8">
                                             <rect key="frame" x="0.0" y="246" width="334" height="40.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Fq2-Cg-JcG">
                                                     <rect key="frame" x="0.0" y="0.0" width="161" height="40.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-gb-7JW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time spent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-gb-7JW">
                                                             <rect key="frame" x="0.0" y="0.0" width="161" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                             <color key="textColor" systemColor="secondaryLabelColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z96-xx-jGC">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z96-xx-jGC">
                                                             <rect key="frame" x="0.0" y="20" width="161" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemIndigoColor"/>
@@ -260,13 +277,18 @@ in progress.</string>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pdE-lu-zRi" secondAttribute="bottom" constant="24" id="5oQ-aa-P6G"/>
+                <constraint firstItem="pdE-lu-zRi" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="I9e-co-QeJ"/>
                 <constraint firstItem="pdE-lu-zRi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="LlP-Ys-ttg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvo-4S-k9A" secondAttribute="trailing" constant="24" id="QGH-e3-V14"/>
                 <constraint firstItem="Mvo-4S-k9A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="WeG-ip-9B7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pdE-lu-zRi" secondAttribute="trailing" constant="24" id="heU-vM-mHr"/>
                 <constraint firstItem="Mvo-4S-k9A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mVS-41-XO0"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Mvo-4S-k9A"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="139" y="135"/>
         </view>
     </objects>
