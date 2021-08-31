@@ -8,6 +8,7 @@ target 'Bored' do
   # Pods for Bored
   pod 'RxSwift', '6.2.0'
   pod 'RxCocoa', '6.2.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'BoredTests' do
     inherit! :search_paths
