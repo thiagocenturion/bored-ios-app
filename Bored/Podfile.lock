@@ -1,4 +1,6 @@
 PODS:
+  - Nimble (9.2.1)
+  - Quick (4.0.0)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -8,23 +10,29 @@ PODS:
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Nimble
+  - Quick
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - Nimble
+    - Quick
     - RxCocoa
     - RxRelay
     - RxSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: ab27257546428face0277e6e586d43e71d36eca1
+PODFILE CHECKSUM: 7060fe57c5673fc28cb2d3dde41059f3db0d8782
 
 COCOAPODS: 1.10.1

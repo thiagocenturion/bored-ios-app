@@ -34,6 +34,9 @@
 		FA18D1FC26DDC26600120B9D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1FA26DDC26600120B9D /* HomeViewController.swift */; };
 		FA18D1FD26DDC26600120B9D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA18D1FB26DDC26600120B9D /* HomeViewController.xib */; };
 		FA18D1FF26DDC33A00120B9D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D1FE26DDC33A00120B9D /* HomeViewModel.swift */; };
+		FA18D20E26DDEA1300120B9D /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D20D26DDEA1300120B9D /* HomeCoordinatorTests.swift */; };
+		FA18D21126DDECE300120B9D /* UINavigationControllerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D21026DDECE300120B9D /* UINavigationControllerStub.swift */; };
+		FA18D21326DDEEC600120B9D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D21226DDEEC600120B9D /* HomeViewModelTests.swift */; };
 		FAC6E67926D7164700FD46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67826D7164700FD46F8 /* AppDelegate.swift */; };
 		FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */; };
 		FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC6E68126D7164900FD46F8 /* Assets.xcassets */; };
@@ -93,6 +96,9 @@
 		FA18D1FA26DDC26600120B9D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FA18D1FB26DDC26600120B9D /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FA18D1FE26DDC33A00120B9D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FA18D20D26DDEA1300120B9D /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
+		FA18D21026DDECE300120B9D /* UINavigationControllerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerStub.swift; sourceTree = "<group>"; };
+		FA18D21226DDEEC600120B9D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		FAC6E67526D7164700FD46F8 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC6E67826D7164700FD46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -354,6 +360,39 @@
 			path = Activity;
 			sourceTree = "<group>";
 		};
+		FA18D20A26DDE9CF00120B9D /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D20B26DDE9DF00120B9D /* Scenes */,
+			);
+			path = Spec;
+			sourceTree = "<group>";
+		};
+		FA18D20B26DDE9DF00120B9D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D20C26DDE9E600120B9D /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FA18D20C26DDE9E600120B9D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D20D26DDEA1300120B9D /* HomeCoordinatorTests.swift */,
+				FA18D21226DDEEC600120B9D /* HomeViewModelTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA18D20F26DDECD500120B9D /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D21026DDECE300120B9D /* UINavigationControllerStub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		FAC6E66C26D7164700FD46F8 = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +434,8 @@
 		FAC6E68E26D7164900FD46F8 /* BoredTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA18D20F26DDECD500120B9D /* Stub */,
+				FA18D20A26DDE9CF00120B9D /* Spec */,
 				FAC6E68F26D7164900FD46F8 /* BoredTests.swift */,
 				FAC6E69126D7164900FD46F8 /* Info.plist */,
 			);
@@ -440,6 +481,7 @@
 				FAC6E68726D7164900FD46F8 /* Sources */,
 				FAC6E68826D7164900FD46F8 /* Frameworks */,
 				FAC6E68926D7164900FD46F8 /* Resources */,
+				6A4AB9754EFFDFC076FC835F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -625,6 +667,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6A4AB9754EFFDFC076FC835F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredTests/Pods-BoredTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoredTests/Pods-BoredTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoredTests/Pods-BoredTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FFA6453E2D720DE66BE21679 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -680,7 +739,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA18D21126DDECE300120B9D /* UINavigationControllerStub.swift in Sources */,
 				FAC6E69026D7164900FD46F8 /* BoredTests.swift in Sources */,
+				FA18D20E26DDEA1300120B9D /* HomeCoordinatorTests.swift in Sources */,
+				FA18D21326DDEEC600120B9D /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

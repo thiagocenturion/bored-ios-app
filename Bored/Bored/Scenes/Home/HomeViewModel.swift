@@ -29,15 +29,5 @@ final class HomeViewModel {
         self.title = title
         self.newActivityText = newActivityText
         self.listActivitiesText = listActivitiesText
-
-        bind()
-    }
-}
-
-// MARK: - Binding
-extension HomeViewModel {
-
-    private func bind() {
-        // TODO: Core Data
     }
 }
