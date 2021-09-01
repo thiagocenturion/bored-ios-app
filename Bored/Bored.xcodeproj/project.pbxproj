@@ -46,6 +46,10 @@
 		FA18D22826DEFF0E00120B9D /* ActivityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22726DEFF0E00120B9D /* ActivityMock.swift */; };
 		FA18D22B26DF0ECC00120B9D /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22926DF0ECC00120B9D /* NewActivityViewController.swift */; };
 		FA18D22C26DF0ECC00120B9D /* NewActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA18D22A26DF0ECC00120B9D /* NewActivityViewController.xib */; };
+		FA18D22F26DF1EDF00120B9D /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22E26DF1EDF00120B9D /* ActivityCardView.swift */; };
+		FA18D23126DF1F4B00120B9D /* ActivityCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA18D23026DF1F4B00120B9D /* ActivityCardView.xib */; };
+		FA18D23326DF264100120B9D /* ActivityCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23226DF264100120B9D /* ActivityCardViewModel.swift */; };
+		FA18D23626DF4D5A00120B9D /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */; };
 		FAC6E67926D7164700FD46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67826D7164700FD46F8 /* AppDelegate.swift */; };
 		FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */; };
 		FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC6E68126D7164900FD46F8 /* Assets.xcassets */; };
@@ -117,6 +121,10 @@
 		FA18D22726DEFF0E00120B9D /* ActivityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMock.swift; sourceTree = "<group>"; };
 		FA18D22926DF0ECC00120B9D /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		FA18D22A26DF0ECC00120B9D /* NewActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActivityViewController.xib; sourceTree = "<group>"; };
+		FA18D22E26DF1EDF00120B9D /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
+		FA18D23026DF1F4B00120B9D /* ActivityCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCardView.xib; sourceTree = "<group>"; };
+		FA18D23226DF264100120B9D /* ActivityCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardViewModel.swift; sourceTree = "<group>"; };
+		FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 		FAC6E67526D7164700FD46F8 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC6E67826D7164700FD46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +193,7 @@
 		FA18D1A826D9872F00120B9D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				FA18D22D26DF1E9200120B9D /* ActivityCardView */,
 				FA18D1C526DD74BB00120B9D /* Alert */,
 				FA18D1C426DD74B000120B9D /* ActivityIndicator */,
 				FA18D1C326DD74AA00120B9D /* Coordinator */,
@@ -304,6 +313,7 @@
 		FA18D1CB26DD759C00120B9D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FA18D23426DF4D3F00120B9D /* NumberFormatter */,
 				FA18D1DD26DD779100120B9D /* String */,
 				FA18D1D426DD76AD00120B9D /* URLSession */,
 				FA18D1D126DD767500120B9D /* UINavigationController */,
@@ -448,6 +458,24 @@
 				FA18D22726DEFF0E00120B9D /* ActivityMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FA18D22D26DF1E9200120B9D /* ActivityCardView */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D23226DF264100120B9D /* ActivityCardViewModel.swift */,
+				FA18D22E26DF1EDF00120B9D /* ActivityCardView.swift */,
+				FA18D23026DF1F4B00120B9D /* ActivityCardView.xib */,
+			);
+			path = ActivityCardView;
+			sourceTree = "<group>";
+		};
+		FA18D23426DF4D3F00120B9D /* NumberFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */,
+			);
+			path = NumberFormatter;
 			sourceTree = "<group>";
 		};
 		FAC6E66C26D7164700FD46F8 = {
@@ -622,6 +650,7 @@
 				FAC6E68526D7164900FD46F8 /* LaunchScreen.storyboard in Resources */,
 				FA18D1E126DD782D00120B9D /* Localizable.strings in Resources */,
 				FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */,
+				FA18D23126DF1F4B00120B9D /* ActivityCardView.xib in Resources */,
 				FA18D1FD26DDC26600120B9D /* HomeViewController.xib in Resources */,
 				FA18D22C26DF0ECC00120B9D /* NewActivityViewController.xib in Resources */,
 			);
@@ -779,6 +808,7 @@
 				FA18D1E826DD793200120B9D /* APIClient.swift in Sources */,
 				FA18D1BB26DD718C00120B9D /* AppCoordinator.swift in Sources */,
 				FA18D1BD26DD737C00120B9D /* UINavigationControllerType.swift in Sources */,
+				FA18D22F26DF1EDF00120B9D /* ActivityCardView.swift in Sources */,
 				FA18D21B26DEEF6700120B9D /* ActivityFilter.swift in Sources */,
 				FA18D1CA26DD750500120B9D /* AlertActionViewModel.swift in Sources */,
 				FA18D1FC26DDC26600120B9D /* HomeViewController.swift in Sources */,
@@ -790,12 +820,14 @@
 				FA18D1B326D98EB700120B9D /* BaseCoordinator.swift in Sources */,
 				FA18D1F726DDBF5B00120B9D /* HomeCoordinator.swift in Sources */,
 				FA18D1D326DD768900120B9D /* UIViewController+Rx.swift in Sources */,
+				FA18D23326DF264100120B9D /* ActivityCardViewModel.swift in Sources */,
 				FA18D1E426DD787600120B9D /* Endpoint.swift in Sources */,
 				FA18D1E626DD78FE00120B9D /* APIRequest.swift in Sources */,
 				FA18D22B26DF0ECC00120B9D /* NewActivityViewController.swift in Sources */,
 				FA18D1ED26DD7A6400120B9D /* ActivityServices.swift in Sources */,
 				FA18D1F226DD7BCC00120B9D /* Activity.swift in Sources */,
 				FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */,
+				FA18D23626DF4D5A00120B9D /* NumberFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
