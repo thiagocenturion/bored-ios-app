@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var listActivitiesButton: UIButton!
 
     // MARK: Properties
-    let viewModel: HomeViewModel
+    private let viewModel: HomeViewModel
     private let disposeBag = DisposeBag()
 
     // MARK: - Initialization

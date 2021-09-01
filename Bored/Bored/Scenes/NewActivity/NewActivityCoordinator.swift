@@ -31,8 +31,8 @@ final class NewActivityCoordinator: BaseCoordinator<Void> {
             .bind(to: startFilterScene)
             .disposed(by: disposeBag)
 
-//        let viewController = NewActivityViewController(viewModel: viewModel)
-//        navigationController.pushViewController(viewController, animated: true)
+        let viewController = NewActivityViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: true)
 
         return Observable.never()
     }

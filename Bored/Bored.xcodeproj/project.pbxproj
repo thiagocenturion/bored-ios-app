@@ -44,6 +44,8 @@
 		FA18D21D26DEF4FE00120B9D /* APIClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D21C26DEF4FE00120B9D /* APIClientStub.swift */; };
 		FA18D22326DEF5C800120B9D /* ActivityServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22226DEF5C800120B9D /* ActivityServicesTests.swift */; };
 		FA18D22826DEFF0E00120B9D /* ActivityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22726DEFF0E00120B9D /* ActivityMock.swift */; };
+		FA18D22B26DF0ECC00120B9D /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D22926DF0ECC00120B9D /* NewActivityViewController.swift */; };
+		FA18D22C26DF0ECC00120B9D /* NewActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA18D22A26DF0ECC00120B9D /* NewActivityViewController.xib */; };
 		FAC6E67926D7164700FD46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67826D7164700FD46F8 /* AppDelegate.swift */; };
 		FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */; };
 		FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC6E68126D7164900FD46F8 /* Assets.xcassets */; };
@@ -113,6 +115,8 @@
 		FA18D21C26DEF4FE00120B9D /* APIClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientStub.swift; sourceTree = "<group>"; };
 		FA18D22226DEF5C800120B9D /* ActivityServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityServicesTests.swift; sourceTree = "<group>"; };
 		FA18D22726DEFF0E00120B9D /* ActivityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMock.swift; sourceTree = "<group>"; };
+		FA18D22926DF0ECC00120B9D /* NewActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
+		FA18D22A26DF0ECC00120B9D /* NewActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewActivityViewController.xib; sourceTree = "<group>"; };
 		FAC6E67526D7164700FD46F8 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC6E67826D7164700FD46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			children = (
 				FA18D21426DDF2FC00120B9D /* NewActivityCoordinator.swift */,
 				FA18D21626DDF6BA00120B9D /* NewActivityViewModel.swift */,
+				FA18D22926DF0ECC00120B9D /* NewActivityViewController.swift */,
+				FA18D22A26DF0ECC00120B9D /* NewActivityViewController.xib */,
 			);
 			path = NewActivity;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				FA18D1E126DD782D00120B9D /* Localizable.strings in Resources */,
 				FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */,
 				FA18D1FD26DDC26600120B9D /* HomeViewController.xib in Resources */,
+				FA18D22C26DF0ECC00120B9D /* NewActivityViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +792,7 @@
 				FA18D1D326DD768900120B9D /* UIViewController+Rx.swift in Sources */,
 				FA18D1E426DD787600120B9D /* Endpoint.swift in Sources */,
 				FA18D1E626DD78FE00120B9D /* APIRequest.swift in Sources */,
+				FA18D22B26DF0ECC00120B9D /* NewActivityViewController.swift in Sources */,
 				FA18D1ED26DD7A6400120B9D /* ActivityServices.swift in Sources */,
 				FA18D1F226DD7BCC00120B9D /* Activity.swift in Sources */,
 				FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */,

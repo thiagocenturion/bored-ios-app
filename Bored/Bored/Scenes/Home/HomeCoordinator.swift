@@ -40,7 +40,11 @@ extension HomeCoordinator {
     private var startNewActivityScene: Binder<Void> {
         return Binder(self) { target, _ in
 
-            // TODO: Open new activity scene
+            let coordinator = NewActivityCoordinator(navigationController: target.navigationController)
+
+            target.coordinate(to: coordinator)
+                .subscribe()
+                .disposed(by: target.disposeBag)
         }
     }
 
