@@ -47,3 +47,29 @@ enum NetworkingError: Error {
         }
     }
 }
+
+// MARK: - Equatable
+extension NetworkingError: Equatable {
+    static func == (lhs: NetworkingError, rhs: NetworkingError) -> Bool {
+        switch (lhs, rhs) {
+        case (.noConnection, .noConnection),
+             (.invalidEncode, .invalidEncode),
+             (.noData, .noData),
+             (.invalidDecode, .invalidDecode),
+             (.unknown, .unknown):
+            return true
+        case (nonHTTPResponse(let lhsResponse), nonHTTPResponse(let rhsResponse)):
+            return lhsResponse == rhsResponse
+        case (badRequest(let lhsError), badRequest(let rhsError)):
+            return lhsError.localizedDescription == rhsError.localizedDescription
+        case (serverError(let lhsError), serverError(let rhsError)):
+            return lhsError.localizedDescription == rhsError.localizedDescription
+        case (serverErrorMessage(let lhsMessage), serverErrorMessage(let rhsMessage)):
+            return lhsMessage == rhsMessage
+        case (parseError(let lhsError), parseError(let rhsError)):
+            return lhsError.localizedDescription == rhsError.localizedDescription
+        default:
+            return false
+        }
+    }
+}

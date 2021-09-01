@@ -10,19 +10,19 @@ import SwiftyJSON
 import RxCocoa
 import RxSwift
 
-protocol APIClientType {
+protocol APIClientProtocol {
     var session: URLSession { get }
 
     func request(with request: APIRequestType) -> Single<JSON>
 }
 
-final class APIClient: APIClientType {
+final class APIClient: APIClientProtocol {
 
     // MARK: Shared
 
-    static let shared: APIClientType = APIClient(session: URLSession.shared)
+    static let shared: APIClientProtocol = APIClient(session: URLSession.shared)
 
-    // MARK: APIClientType
+    // MARK: APIClientProtocol
 
     let session: URLSession
 
@@ -33,7 +33,7 @@ final class APIClient: APIClientType {
     }
 }
 
-// MARK: - APIClientType
+// MARK: - APIClientProtocol
 extension APIClient {
 
     func request(with request: APIRequestType) -> Single<JSON> {

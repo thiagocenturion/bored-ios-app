@@ -25,19 +25,11 @@ final class HomeViewModelTests: QuickSpec {
 
                 it("configures the properties correctly") {
 
-                    let title = "Home"
-                    let newActivityText = "+ New Activity"
-                    let listActivitiesText = "Activities"
+                    let viewModel = HomeViewModel()
 
-                    let viewModel = HomeViewModel(
-                        title: title,
-                        newActivityText: newActivityText,
-                        listActivitiesText: listActivitiesText
-                    )
-
-                    expect(viewModel.title) == title
-                    expect(viewModel.newActivityText) == newActivityText
-                    expect(viewModel.listActivitiesText) == listActivitiesText
+                    expect(viewModel.title) == "home_title".localized
+                    expect(viewModel.newActivityText) == "home_new_activity_button".localized
+                    expect(viewModel.listActivitiesText) == "home_list_activities_button".localized
                 }
             }
         }

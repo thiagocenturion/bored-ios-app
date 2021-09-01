@@ -2,7 +2,7 @@
 //  HomeCoordinatorTests.swift
 //  BoredTests
 //
-//  Created by MACBOOK on 31/08/21.
+//  Created by Thiago Centurion on 31/08/21.
 //
 
 import Foundation
@@ -23,7 +23,7 @@ final class HomeCoordinatorTests: QuickSpec {
 
                 it("initialize with correct parameters") {
 
-                    let navigationController = UINavigationControllerStub()
+                    let navigationController = UINavigationControllerSpy()
                     let coordinator = HomeCoordinator(navigationController: navigationController)
 
                     expect(coordinator.navigationController) === navigationController
@@ -34,7 +34,7 @@ final class HomeCoordinatorTests: QuickSpec {
 
                 it("pushes the correctly view controller") {
 
-                    let navigationControllerStub = UINavigationControllerStub()
+                    let navigationControllerStub = UINavigationControllerSpy()
                     let coordinator = HomeCoordinator(navigationController: navigationControllerStub)
 
                     expect(navigationControllerStub.pushCalls.isEmpty) == true

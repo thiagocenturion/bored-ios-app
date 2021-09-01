@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Bored
 //
-//  Created by MACBOOK on 30/08/21.
+//  Created by Thiago Centurion on 30/08/21.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var listActivitiesButton: UIButton!
 
     // MARK: Properties
-    let viewModel: HomeViewModel
+    private let viewModel: HomeViewModel
     private let disposeBag = DisposeBag()
 
     // MARK: - Initialization

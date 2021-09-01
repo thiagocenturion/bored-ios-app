@@ -13,11 +13,7 @@ final class HomeCoordinator: BaseCoordinator<Void> {
 
     // MARK: - Override methods
     override func start() -> Observable<Void> {
-        let viewModel = HomeViewModel(
-            title: "home_title".localized,
-            newActivityText: "home_new_activity_button".localized,
-            listActivitiesText: "home_list_activities_button".localized
-        )
+        let viewModel = HomeViewModel()
 
         viewModel.openNewActivity
             .bind(to: startNewActivityScene)
@@ -34,13 +30,17 @@ final class HomeCoordinator: BaseCoordinator<Void> {
     }
 }
 
-// MARK: - Router
+// MARK: - Routing
 extension HomeCoordinator {
 
     private var startNewActivityScene: Binder<Void> {
         return Binder(self) { target, _ in
 
-            // TODO: Open new activity scene
+            let coordinator = NewActivityCoordinator(navigationController: target.navigationController)
+
+            target.coordinate(to: coordinator)
+                .subscribe()
+                .disposed(by: target.disposeBag)
         }
     }
 

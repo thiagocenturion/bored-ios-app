@@ -70,3 +70,6 @@ enum HTTPMethod {
         }
     }
 }
+
+// MARK: - Equatable
+extension HTTPMethod: Equatable {}

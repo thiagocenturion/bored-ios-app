@@ -10,68 +10,54 @@ import RxSwift
 import SwiftyJSON
 import CoreLocation
 
-protocol PlaceServicesType {
+protocol ActivityServicesProtocol {
 
-    var apiClient: APIClientType { get }
+    var apiClient: APIClientProtocol { get }
 
-    func requestActivity(
-        key: String?,
-        type: Activity.CategoryType?,
-        participants: Int?,
-        price: Double?,
-        priceRange: Range<Double>?,
-        accessibility: Float?,
-        accessibilityRange: Range<Float>?) -> Single<Activity>
+    func requestActivity(with filter: ActivityFilter) -> Single<Activity>
 }
 
-final class PlaceServices: PlaceServicesType {
+final class ActivityServices: ActivityServicesProtocol {
 
     // MARK: Properties
-    let apiClient: APIClientType
+    let apiClient: APIClientProtocol
 
     // MARK: - Initialization
-    init(apiClient: APIClientType) {
+    init(apiClient: APIClientProtocol) {
         self.apiClient = apiClient
     }
 
     // MARK: - PlaceWebServicesType
-    func requestActivity(
-        key: String? = nil,
-        type: Activity.CategoryType? = nil,
-        participants: Int? = nil,
-        price: Double? = nil,
-        priceRange: Range<Double>? = nil,
-        accessibility: Float? = nil,
-        accessibilityRange: Range<Float>? = nil) -> Single<Activity> {
+    func requestActivity(with filter: ActivityFilter) -> Single<Activity> {
 
         var queryItems = [URLQueryItem]()
 
-        if let key = key {
+        if let key = filter.key {
             queryItems.append(.init(name: "key", value: key))
         }
 
-        if let type = type {
+        if let type = filter.type {
             queryItems.append(.init(name: "type", value: type.rawValue))
         }
 
-        if let participants = participants {
+        if let participants = filter.participants {
             queryItems.append(.init(name: "participants", value: "\(participants)"))
         }
 
-        if let price = price {
+        if let price = filter.price {
             queryItems.append(.init(name: "price", value: "\(price)"))
         }
 
-        if let priceRange = priceRange {
+        if let priceRange = filter.priceRange {
             queryItems.append(.init(name: "minprice", value: "\(priceRange.lowerBound)"))
             queryItems.append(.init(name: "maxprice", value: "\(priceRange.upperBound)"))
         }
 
-        if let accessibility = accessibility {
+        if let accessibility = filter.accessibility {
             queryItems.append(.init(name: "accessibility", value: "\(accessibility)"))
         }
 
-        if let accessibilityRange = accessibilityRange {
+        if let accessibilityRange = filter.accessibilityRange {
             queryItems.append(.init(name: "minaccessibility", value: "\(accessibilityRange.lowerBound)"))
             queryItems.append(.init(name: "maxaccessibility", value: "\(accessibilityRange.upperBound)"))
         }
