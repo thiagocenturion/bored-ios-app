@@ -1,8 +1,8 @@
 //
-//  UINavigationControllerStub.swift
+//  UINavigationControllerSpy.swift
 //  BoredTests
 //
-//  Created by MACBOOK on 31/08/21.
+//  Created by Thiago Centurion on 31/08/21.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import RxSwift
 
 @testable import Bored
 
-final class UINavigationControllerStub: UINavigationControllerType {
+final class UINavigationControllerSpy: UINavigationControllerType {
 
     // MARK: - Stub
     var presentCalls: [PresentCall] = []
@@ -61,7 +61,7 @@ final class UINavigationControllerStub: UINavigationControllerType {
 }
 
 // MARK: - Call
-extension UINavigationControllerStub {
+extension UINavigationControllerSpy {
 
     struct PresentCall {
         let viewController: UIViewController
