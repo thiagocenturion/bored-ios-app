@@ -10,6 +10,8 @@ import CoreData
 
 protocol ActivityCoreDataProtocol {
     func fetchActivities() throws -> [Activity]
+    func save(activity: Activity) throws
+    func update(activity: Activity) throws
 }
 
 final class ActivityCoreData: ActivityCoreDataProtocol {
@@ -88,6 +90,7 @@ extension ActivityCoreData {
     }
 }
 
+// MARK: - NSManagedObjectContext
 extension NSManagedObjectContext {
     static var current: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

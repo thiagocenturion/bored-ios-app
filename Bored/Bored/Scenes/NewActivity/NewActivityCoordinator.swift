@@ -8,16 +8,15 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CoreData
 
 final class NewActivityCoordinator: BaseCoordinator<Void> {
 
     // MARK: - Override methods
     override func start() -> Observable<Void> {
         let viewModel = NewActivityViewModel(
-            title: "new_activity_title".localized,
-            filterText: "new_activity_filter_button".localized,
-            reloadText: "new_activity_reload_button".localized,
             activityServices: ActivityServices(apiClient: APIClient.shared),
+            activityCoreData: ActivityCoreData(managedContext: NSManagedObjectContext.current),
             isLoading: false,
             activity: nil,
             filter: ActivityFilter()
@@ -27,7 +26,7 @@ final class NewActivityCoordinator: BaseCoordinator<Void> {
             .bind(to: navigationController.alert)
             .disposed(by: disposeBag)
 
-        viewModel.openFilter
+        viewModel.filterDidTap
             .bind(to: startFilterScene)
             .disposed(by: disposeBag)
 

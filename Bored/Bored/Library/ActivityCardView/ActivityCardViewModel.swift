@@ -32,9 +32,9 @@ final class ActivityCardViewModel {
     let isPerformButtonHidden = BehaviorRelay<Bool>(value: true)
 
     // MARK: Actions
-    let deleteDidTap = PublishRelay<Void>()
-    let checkDidTap = PublishRelay<Void>()
-    let performDidTap = PublishRelay<Void>()
+    let deleteDidTap = PublishRelay<Activity>()
+    let checkDidTap = PublishRelay<Activity>()
+    let performDidTap = PublishRelay<Activity>()
 
     // MARK: - Initialization
     init(activity: Activity, calendar: Calendar) {

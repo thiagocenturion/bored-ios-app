@@ -17,10 +17,10 @@ final class NewActivityViewController: UIViewController {
 
     // MARK: Properties
     private let viewModel: NewActivityViewModel
-    private var activityCardViewModel: ActivityCardViewModel?
     private let disposeBag = DisposeBag()
 
     private weak var activityCardView: ActivityCardView?
+    private var activityCardViewModel: ActivityCardViewModel?
 
     // MARK: - Initialization
     init(viewModel: NewActivityViewModel) {
@@ -72,11 +72,11 @@ extension NewActivityViewController {
             .disposed(by: disposeBag)
 
         filterButton.rx.tap
-            .bind(to: viewModel.openFilter)
+            .bind(to: viewModel.filterDidTap)
             .disposed(by: disposeBag)
 
         reloadButton.rx.tap
-            .bind(to: viewModel.reloadActivity)
+            .bind(to: viewModel.reloadDidTap)
             .disposed(by: disposeBag)
     }
 
@@ -88,6 +88,18 @@ extension NewActivityViewController {
             let activityCardView = ActivityCardView(viewModel: activityCardViewModel)
             stackView.addArrangedSubview(activityCardView)
             self.activityCardView = activityCardView
+
+            activityCardViewModel.deleteDidTap
+                .bind(to: viewModel.deleteDidTap)
+                .disposed(by: disposeBag)
+
+            activityCardViewModel.checkDidTap
+                .bind(to: viewModel.checkDidTap)
+                .disposed(by: disposeBag)
+
+            activityCardViewModel.performDidTap
+                .bind(to: viewModel.performDidTap)
+                .disposed(by: disposeBag)
         }
     }
 

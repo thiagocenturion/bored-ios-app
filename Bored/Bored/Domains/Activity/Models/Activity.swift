@@ -41,7 +41,7 @@ final class Activity: Codable {
     let key: String
 
     var initialDate: Date?
-    let status: Status
+    var status: Status
 
     // MARK: - CodingKeys
     private enum CodingKeys: String, CodingKey {

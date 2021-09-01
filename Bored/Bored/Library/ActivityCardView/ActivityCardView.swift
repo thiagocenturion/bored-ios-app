@@ -100,14 +100,17 @@ extension ActivityCardView {
 
         // Buttons
         deleteButton.rx.tap
+            .withLatestFrom(viewModel.activity)
             .bind(to: viewModel.deleteDidTap)
             .disposed(by: disposeBag)
 
         checkButton.rx.tap
+            .withLatestFrom(viewModel.activity)
             .bind(to: viewModel.checkDidTap)
             .disposed(by: disposeBag)
 
         performButton.rx.tap
+            .withLatestFrom(viewModel.activity)
             .bind(to: viewModel.performDidTap)
             .disposed(by: disposeBag)
     }

@@ -12,10 +12,12 @@ import RxCocoa
 final class NewActivityViewModel {
 
     // MARK: Properties
-    let title: String
-    let filterText: String
-    let reloadText: String
-    let activityServices: ActivityServicesProtocol
+    let title = "new_activity_title".localized
+    let filterText = "new_activity_filter_button".localized
+    let reloadText = "new_activity_reload_button".localized
+    
+    private let activityServices: ActivityServicesProtocol
+    private let activityCoreData: ActivityCoreDataProtocol
 
     private let disposeBag = DisposeBag()
 
@@ -26,22 +28,21 @@ final class NewActivityViewModel {
 
     // MARK: Actions
     let alert = PublishRelay<AlertViewModel>()
-    let openFilter = PublishRelay<Void>()
-    let reloadActivity = PublishRelay<Void>()
+    let filterDidTap = PublishRelay<Void>()
+    let reloadDidTap = PublishRelay<Void>()
+    let deleteDidTap = PublishRelay<Activity>()
+    let checkDidTap = PublishRelay<Activity>()
+    let performDidTap = PublishRelay<Activity>()
 
     // MARK: - Initialization
-    init(title: String,
-         filterText: String,
-         reloadText: String,
-         activityServices: ActivityServicesProtocol,
+    init(activityServices: ActivityServicesProtocol,
+         activityCoreData: ActivityCoreDataProtocol,
          isLoading: Bool,
          activity: Activity?,
          filter: ActivityFilter) {
 
-        self.title = title
-        self.filterText = filterText
-        self.reloadText = reloadText
         self.activityServices = activityServices
+        self.activityCoreData = activityCoreData
 
         self.isLoading = .init(value: isLoading)
         self.activity = .init(value: activity)
@@ -55,9 +56,18 @@ final class NewActivityViewModel {
 extension NewActivityViewModel {
 
     private func bind() {
-        reloadActivity
+        reloadDidTap
             .withLatestFrom(filter)
             .bind(to: fetchNewActivity)
+            .disposed(by: disposeBag)
+
+        performDidTap
+            .do(onNext: { [weak self] activity in
+                activity.status = .inProgress
+                activity.initialDate = Date()
+                try self?.activityCoreData.save(activity: activity)
+            })
+            .bind(to: activity)
             .disposed(by: disposeBag)
     }
 }
