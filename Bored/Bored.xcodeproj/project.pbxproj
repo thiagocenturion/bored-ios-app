@@ -50,6 +50,8 @@
 		FA18D23126DF1F4B00120B9D /* ActivityCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA18D23026DF1F4B00120B9D /* ActivityCardView.xib */; };
 		FA18D23326DF264100120B9D /* ActivityCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23226DF264100120B9D /* ActivityCardViewModel.swift */; };
 		FA18D23626DF4D5A00120B9D /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */; };
+		FA18D23926DF4FBC00120B9D /* Bored.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23726DF4FBC00120B9D /* Bored.xcdatamodeld */; };
+		FA18D23C26DF50B000120B9D /* ActivityCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA18D23B26DF50B000120B9D /* ActivityCoreData.swift */; };
 		FAC6E67926D7164700FD46F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67826D7164700FD46F8 /* AppDelegate.swift */; };
 		FAC6E67B26D7164700FD46F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */; };
 		FAC6E68226D7164900FD46F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC6E68126D7164900FD46F8 /* Assets.xcassets */; };
@@ -125,6 +127,8 @@
 		FA18D23026DF1F4B00120B9D /* ActivityCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityCardView.xib; sourceTree = "<group>"; };
 		FA18D23226DF264100120B9D /* ActivityCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardViewModel.swift; sourceTree = "<group>"; };
 		FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		FA18D23826DF4FBC00120B9D /* Bored.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bored.xcdatamodel; sourceTree = "<group>"; };
+		FA18D23B26DF50B000120B9D /* ActivityCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCoreData.swift; sourceTree = "<group>"; };
 		FAC6E67526D7164700FD46F8 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC6E67826D7164700FD46F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC6E67A26D7164700FD46F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				FAC6E68326D7164900FD46F8 /* LaunchScreen.storyboard */,
 				FAC6E68126D7164900FD46F8 /* Assets.xcassets */,
 				FA18D1E026DD782D00120B9D /* Localizable.strings */,
+				FA18D23726DF4FBC00120B9D /* Bored.xcdatamodeld */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 		FA18D1EE26DD7AED00120B9D /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				FA18D23A26DF509600120B9D /* CoreData */,
 				FA18D1EA26DD7A3000120B9D /* Models */,
 				FA18D1E926DD7A2800120B9D /* Services */,
 			);
@@ -476,6 +482,14 @@
 				FA18D23526DF4D5A00120B9D /* NumberFormatter+Extension.swift */,
 			);
 			path = NumberFormatter;
+			sourceTree = "<group>";
+		};
+		FA18D23A26DF509600120B9D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FA18D23B26DF50B000120B9D /* ActivityCoreData.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		FAC6E66C26D7164700FD46F8 = {
@@ -819,10 +833,12 @@
 				FA18D1C226DD748A00120B9D /* ActivityIndicatorViewController.swift in Sources */,
 				FA18D1B326D98EB700120B9D /* BaseCoordinator.swift in Sources */,
 				FA18D1F726DDBF5B00120B9D /* HomeCoordinator.swift in Sources */,
+				FA18D23926DF4FBC00120B9D /* Bored.xcdatamodeld in Sources */,
 				FA18D1D326DD768900120B9D /* UIViewController+Rx.swift in Sources */,
 				FA18D23326DF264100120B9D /* ActivityCardViewModel.swift in Sources */,
 				FA18D1E426DD787600120B9D /* Endpoint.swift in Sources */,
 				FA18D1E626DD78FE00120B9D /* APIRequest.swift in Sources */,
+				FA18D23C26DF50B000120B9D /* ActivityCoreData.swift in Sources */,
 				FA18D22B26DF0ECC00120B9D /* NewActivityViewController.swift in Sources */,
 				FA18D1ED26DD7A6400120B9D /* ActivityServices.swift in Sources */,
 				FA18D1F226DD7BCC00120B9D /* Activity.swift in Sources */,
@@ -1159,6 +1175,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA18D23726DF4FBC00120B9D /* Bored.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA18D23826DF4FBC00120B9D /* Bored.xcdatamodel */,
+			);
+			currentVersion = FA18D23826DF4FBC00120B9D /* Bored.xcdatamodel */;
+			path = Bored.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAC6E66D26D7164700FD46F8 /* Project object */;
 }

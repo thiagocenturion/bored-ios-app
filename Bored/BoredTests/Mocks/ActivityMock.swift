@@ -43,7 +43,7 @@ extension Activity: Equatable {
             lhs.price == rhs.price &&
             lhs.link == rhs.link &&
             lhs.key == rhs.key &&
-            lhs.initialTime == rhs.initialTime &&
+            lhs.initialDate == rhs.initialDate &&
             lhs.status == rhs.status
     }
 }

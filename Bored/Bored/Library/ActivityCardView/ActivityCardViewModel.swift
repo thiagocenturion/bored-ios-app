@@ -68,7 +68,7 @@ extension ActivityCardViewModel {
             .bind(to: status)
             .disposed(by: disposeBag)
 
-        activity.map(\.initialTime)
+        activity.map(\.initialDate)
             .compactMap(timeSpentText(with:))
             .bind(to: timeSpent)
             .disposed(by: disposeBag)
