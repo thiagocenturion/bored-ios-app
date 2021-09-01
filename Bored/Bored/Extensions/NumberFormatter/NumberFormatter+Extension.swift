@@ -2,7 +2,7 @@
 //  NumberFormatter+Extension.swift
 //  Bored
 //
-//  Created by MACBOOK on 01/09/21.
+//  Created by Thiago Centurion on 01/09/21.
 //
 
 import Foundation

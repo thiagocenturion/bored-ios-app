@@ -95,7 +95,6 @@ extension ActivityCardView {
             .disposed(by: disposeBag)
 
         viewModel.price
-            .debug()
             .bind(to: priceLabel.rx.text)
             .disposed(by: disposeBag)
 
