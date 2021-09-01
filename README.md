@@ -36,49 +36,16 @@ API https://www.boredapi.com ([Documentation](https://www.boredapi.com/documenta
 The architecture pattern for this application is MVVM with reactive Coordinator, using [RxSwift](https://github.com/ReactiveX/RxSwift).
 
 ## Unit Tests
-This project tests almost all MVVM-C layers. For that, it was necessary to create Stubs of UIKit native classes, such as `UIViewController`, `UINavigationController`, and `UIApplication` using protocols.
+This project tests almost all MVVM-C layers. For that, it was necessary to create Stub and Spy of UIKit native classes, such as `UIViewController` and `UINavigationController` using protocols.
 
-Example:
+## Project Navigator
+Project Navigator for app target and unit test target:
 
-```swift
-protocol UIApplicationType: NSObject {
-    func canOpenURL(_ url: URL) -> Bool
-}
+[<img src="/Images/project_navigator_app.png" align="center" width="250" hspace="0" vspace="10">](/Images/project_navigator_app.png)
+[<img src="/Images/project_navigator_tests.png" align="center" width="250" hspace="0" vspace="10">](/Images/project_navigator_tests.png)
 
-extension UIApplication: UIApplicationType {}
-
-```
-
-Stub:
-```swift
-import UIKit
-
-final class UIApplicationStub: NSObject, UIApplicationType {
-    var canOpenURLCalls: [URL] = []
-    var canOpenURLResponse = true
-    
-    func canOpenURL(_ url: URL) -> Bool {
-        canOpenURLCalls.append(url)
-        return canOpenURLResponse
-    }
-}
-```
-
-Usage:
-```swift
-it("calls canOpenURL correctly") {
-                    
-    let applicationStub = UIApplicationStub()
-    
-    expect(applicationStub.canOpenURLCalls.isEmpty) == true
-    
-    _ = MapsActionSheetViewModel.mock(application: applicationStub)
-    
-    expect(applicationStub.canOpenURLCalls.count) == 2
-    expect(applicationStub.canOpenURLCalls[0]) == URL(string: "https://somestuffurl.com")
-    expect(applicationStub.canOpenURLCalls[1]) == URL(string: "https://somesecondstuffurl.com")
-}
-```
+## Technical Debts
+* We still need to create the unit tests for screens `NewActivity`, `ListActivities` and `FilterActivities`. 
 
 ## Meta
 
