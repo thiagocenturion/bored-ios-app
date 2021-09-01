@@ -19,16 +19,6 @@
 "activity_status_done" = "Done";
 "activity_status_withdrawal" = "Withdrawal";
 
-"timespent_year" = " year";
-"timespent_years" = " years";
-"timespent_month" = " month";
-"timespent_months" = " months";
-"timespent_day" = " day";
-"timespent_days" = " days";
-"timespent_minute" = " minute";
-"timespent_minutes" = " minutes";
-"timestamp_now" = "< 1 minute";
-
 "price_free" = "Free";
 
 "error_message_title" = "Oops!";
