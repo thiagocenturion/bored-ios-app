@@ -34,7 +34,7 @@ final class HomeCoordinator: BaseCoordinator<Void> {
     }
 }
 
-// MARK: - Router
+// MARK: - Routing
 extension HomeCoordinator {
 
     private var startNewActivityScene: Binder<Void> {
