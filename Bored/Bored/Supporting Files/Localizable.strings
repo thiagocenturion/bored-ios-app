@@ -10,7 +10,28 @@
 "home_new_activity_button" = "NEW ACTIVITY";
 "home_list_activities_button" = "ACTIVITIES";
 
-"error_message_title" = "Woops!";
+"new_activity_title" = "My New Activity";
+"new_activity_filter_button" = "FILTER";
+"new_activity_reload_button" = "RELOAD ACTIVITY";
+
+"activity_status_none" = "Not Started";
+"activity_status_inprogress" = "In Progress";
+"activity_status_done" = "Done";
+"activity_status_withdrawal" = "Withdrawal";
+
+"timespent_year" = " year";
+"timespent_years" = " years";
+"timespent_month" = " month";
+"timespent_months" = " months";
+"timespent_day" = " day";
+"timespent_days" = " days";
+"timespent_minute" = " minute";
+"timespent_minutes" = " minutes";
+"timestamp_now" = "< 1 minute";
+
+"price_free" = "Free";
+
+"error_message_title" = "Oops!";
 "error_message_no_connection" = "No connection! Activate mobile networks or connect to a Wi-fi network.";
 "error_message_bad_request" = "We had a problem getting the data. Try again.";
 "error_message_generic" = "There was a problem, but we are already solving it. Try again later.";

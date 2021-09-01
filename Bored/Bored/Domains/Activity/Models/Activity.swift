@@ -2,7 +2,7 @@
 //  Activity.swift
 //  Bored
 //
-//  Created by MACBOOK on 30/08/21.
+//  Created by Thiago Centurion on 30/08/21.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ final class Activity: Codable {
 
     // MARK: Inner types
 
-    enum Status: Int, Codable {
+    enum Status: Int16, Codable {
         case none
         case inProgress
         case done
@@ -19,6 +19,7 @@ final class Activity: Codable {
     }
 
     enum CategoryType: String, Codable {
+        case none
         case education
         case recreational
         case social
@@ -39,13 +40,13 @@ final class Activity: Codable {
     var link: URL?
     let key: String
 
-    var initialTime: Date?
-    let status: Status
+    var initialDate: Date?
+    var status: Status
 
     // MARK: - CodingKeys
     private enum CodingKeys: String, CodingKey {
         case title = "activity"
-        case accessibility, type, participants, price, link, key, initialTime, status
+        case accessibility, type, participants, price, link, key, initialDate, status
     }
 
     // MARK: - Initialization
@@ -56,7 +57,7 @@ final class Activity: Codable {
          price: Double,
          link: URL?,
          key: String,
-         initialTime: Date?,
+         initialDate: Date?,
          status: Status) {
 
         self.title = title
@@ -66,7 +67,7 @@ final class Activity: Codable {
         self.price = price
         self.link = link
         self.key = key
-        self.initialTime = initialTime
+        self.initialDate = initialDate
         self.status = status
     }
 
@@ -87,8 +88,8 @@ final class Activity: Codable {
 
         self.key = try container.decode(String.self, forKey: .key)
 
-        if let initialTime = try? container.decode(Date.self, forKey: .initialTime) {
-            self.initialTime = initialTime
+        if let initialDate = try? container.decode(Date.self, forKey: .initialDate) {
+            self.initialDate = initialDate
         }
 
         let status = try? container.decode(Status.self, forKey: .key)

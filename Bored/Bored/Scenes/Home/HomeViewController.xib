@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pdE-lu-zRi">
-                    <rect key="frame" x="24" y="401" width="366" height="104"/>
+                    <rect key="frame" x="34" y="401" width="346" height="104"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-ms-JUD">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
                             <color key="backgroundColor" systemColor="systemIndigoColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="sbg-qv-GP5"/>
@@ -42,7 +42,7 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZI-cT-0PY">
-                            <rect key="frame" x="0.0" y="60" width="366" height="44"/>
+                            <rect key="frame" x="0.0" y="60" width="346" height="44"/>
                             <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="bkf-sT-Rym"/>
@@ -278,10 +278,10 @@ in progress.</string>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="pdE-lu-zRi" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="I9e-co-QeJ"/>
-                <constraint firstItem="pdE-lu-zRi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="LlP-Ys-ttg"/>
+                <constraint firstItem="pdE-lu-zRi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="34" id="LlP-Ys-ttg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mvo-4S-k9A" secondAttribute="trailing" constant="24" id="QGH-e3-V14"/>
                 <constraint firstItem="Mvo-4S-k9A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="WeG-ip-9B7"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pdE-lu-zRi" secondAttribute="trailing" constant="24" id="heU-vM-mHr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pdE-lu-zRi" secondAttribute="trailing" constant="34" id="heU-vM-mHr"/>
                 <constraint firstItem="Mvo-4S-k9A" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mVS-41-XO0"/>
             </constraints>
             <variation key="default">
