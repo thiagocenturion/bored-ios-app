@@ -58,6 +58,7 @@
 		FAC6E68526D7164900FD46F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC6E68326D7164900FD46F8 /* LaunchScreen.storyboard */; };
 		FAC6E69026D7164900FD46F8 /* BoredTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E68F26D7164900FD46F8 /* BoredTests.swift */; };
 		FAC6E69B26D7164900FD46F8 /* BoredUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6E69A26D7164900FD46F8 /* BoredUITests.swift */; };
+		FAF99A3D26DFB6D800DF0738 /* DateComponentsFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF99A3C26DFB6D800DF0738 /* DateComponentsFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		FAC6E69626D7164900FD46F8 /* BoredUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoredUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC6E69A26D7164900FD46F8 /* BoredUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoredUITests.swift; sourceTree = "<group>"; };
 		FAC6E69C26D7164900FD46F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF99A3C26DFB6D800DF0738 /* DateComponentsFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponentsFormatter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +320,7 @@
 		FA18D1CB26DD759C00120B9D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FAF99A3B26DFB6C200DF0738 /* DateComponentsFormatter */,
 				FA18D23426DF4D3F00120B9D /* NumberFormatter */,
 				FA18D1DD26DD779100120B9D /* String */,
 				FA18D1D426DD76AD00120B9D /* URLSession */,
@@ -550,6 +553,14 @@
 				FAC6E69C26D7164900FD46F8 /* Info.plist */,
 			);
 			path = BoredUITests;
+			sourceTree = "<group>";
+		};
+		FAF99A3B26DFB6C200DF0738 /* DateComponentsFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				FAF99A3C26DFB6D800DF0738 /* DateComponentsFormatter+Extension.swift */,
+			);
+			path = DateComponentsFormatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -819,6 +830,7 @@
 				FA18D1CD26DD75E700120B9D /* UINavigationController+Rx.swift in Sources */,
 				FA18D1DF26DD779D00120B9D /* String+Extensions.swift in Sources */,
 				FA18D1DC26DD775F00120B9D /* NetworkingError.swift in Sources */,
+				FAF99A3D26DFB6D800DF0738 /* DateComponentsFormatter+Extension.swift in Sources */,
 				FA18D1E826DD793200120B9D /* APIClient.swift in Sources */,
 				FA18D1BB26DD718C00120B9D /* AppCoordinator.swift in Sources */,
 				FA18D1BD26DD737C00120B9D /* UINavigationControllerType.swift in Sources */,

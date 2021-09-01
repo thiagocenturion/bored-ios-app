@@ -120,36 +120,7 @@ extension ActivityCardViewModel {
 
     private func timeSpentText(with initialDate: Date?) -> String? {
         if let initialDate = initialDate {
-            let components: Set<Calendar.Component> = [.minute, .hour, .day, .month, .year]
-            let difference = calendar.dateComponents(components, from: initialDate, to: Date())
-
-            if let year = difference.year, year > 0 {
-                if year == 1 {
-                    return "\(year)" + "timespent_year".localized
-                } else {
-                    return "\(year)" + "timespent_years".localized
-                }
-            } else if let month = difference.month, month > 0 {
-                if month == 1 {
-                    return "\(month)" + "timespent_month".localized
-                } else {
-                    return "\(month)" + "timespent_months".localized
-                }
-            } else if let day = difference.day, day > 0 {
-                if day == 1 {
-                    return "\(day)" + "timespent_day".localized
-                } else {
-                    return "\(day)" + "timespent_days".localized
-                }
-            } else if let minute = difference.minute, minute > 0 {
-                if minute == 1 {
-                    return "\(minute)" + "timespent_minute".localized
-                } else {
-                    return "\(minute)" + "timespent_minutes".localized
-                }
-            } else {
-                return "timestamp_now".localized
-            }
+            return DateComponentsFormatter.timeSpentFormatter.string(from: initialDate, to: Date())
         } else {
             return nil
         }
