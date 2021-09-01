@@ -27,7 +27,7 @@
 "timespent_days" = " days";
 "timespent_minute" = " minute";
 "timespent_minutes" = " minutes";
-"timestamp_now" = "Now";
+"timestamp_now" = "< 1 minute";
 
 "price_free" = "Free";
 

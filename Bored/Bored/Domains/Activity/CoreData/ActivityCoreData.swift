@@ -73,7 +73,7 @@ extension ActivityCoreData {
 
     func update(activity: Activity) throws {
         let fetchRequest: NSFetchRequest<ActivityEntity> = ActivityEntity.fetchRequest()
-        fetchRequest.predicate = .init(format: "key=$0", activity.key)
+        fetchRequest.predicate = .init(format: "key=%@", activity.key)
 
         let entity = try managedContext.fetch(fetchRequest).first
         entity?.title = activity.title

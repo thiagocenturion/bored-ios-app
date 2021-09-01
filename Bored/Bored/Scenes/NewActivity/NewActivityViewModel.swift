@@ -69,6 +69,22 @@ extension NewActivityViewModel {
             })
             .bind(to: activity)
             .disposed(by: disposeBag)
+
+        deleteDidTap
+            .do(onNext: { [weak self] activity in
+                activity.status = .withdrawal
+                try self?.activityCoreData.update(activity: activity)
+            })
+            .bind(to: activity)
+            .disposed(by: disposeBag)
+
+        checkDidTap
+            .do(onNext: { [weak self] activity in
+                activity.status = .done
+                try self?.activityCoreData.update(activity: activity)
+            })
+            .bind(to: activity)
+            .disposed(by: disposeBag)
     }
 }
 
