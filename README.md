@@ -23,9 +23,10 @@ API https://www.boredapi.com ([Documentation](https://www.boredapi.com/documenta
     ```
     git clone https://github.com/thiagocenturion/bored-ios-app.git
     ```
-2. Open Terminal and run `pod install`.
-3. Wait for the instalation.
-4. Open `Bored.xcworkspace`.
+2. Go to `Bored` folder.
+3. Open Terminal and run `pod install`.
+4. Wait for the instalation.
+5. Open `Bored.xcworkspace`.
 
 ## Requirements
 
